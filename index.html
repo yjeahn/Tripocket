@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tripocket</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Persistent Logo -->
+    <div id="global-logo" class="global-logo">tripocket</div>
+
+    <!-- Region Selection Screen (Home) -->
+    <div id="region-screen" class="screen home-search-screen">
+      <div id="home-search-center" class="home-search-center">
+        <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/279817e9-5781-43e0-90c1-691844fa5b32/media__1777341185521.png" alt="tripocket" class="home-main-logo">
+        <div class="search-bar-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="main-search-input" class="main-search-input" placeholder="Where to with tripocket?" readonly>
+        </div>
+      </div>
+      
+      <div id="region-suggestions" class="region-suggestions hidden">
+        <div class="region-grid" style="padding-top: 0;">
+        <div class="region-card" data-region="Seoul">
+          <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=400&q=80" alt="Seoul">
+          <div class="region-label">Seoul</div>
+        </div>
+        <div class="region-card" data-region="Busan">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/busan_img_1776807723800.png" alt="Busan">
+          <div class="region-label">Busan</div>
+        </div>
+        <div class="region-card" data-region="Incheon">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/incheon_img_1776807737252.png" alt="Incheon">
+          <div class="region-label">Incheon</div>
+        </div>
+        <div class="region-card" data-region="Daegu">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/daegu_img_1776807751665.png" alt="Daegu">
+          <div class="region-label">Daegu</div>
+        </div>
+        <div class="region-card" data-region="Daejeon">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/daejeon_img_1776807763412.png" alt="Daejeon">
+          <div class="region-label">Daejeon</div>
+        </div>
+        <div class="region-card" data-region="Gwangju">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/gwangju_img_1776807776399.png" alt="Gwangju">
+          <div class="region-label">Gwangju</div>
+        </div>
+        <div class="region-card" data-region="Ulsan">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/ulsan_img_1776807790434.png" alt="Ulsan">
+          <div class="region-label">Ulsan</div>
+        </div>
+        <div class="region-card" data-region="Jeju">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/jeju_img_1776807802829.png" alt="Jeju">
+          <div class="region-label">Jeju</div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Feed Screen -->
+    <div id="feed-screen" class="screen hidden">
+      <header class="feed-header">
+        <button id="back-to-region-btn" class="icon-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 id="selected-region-title">EXPLORE TRIPS</h1>
+        <div style="width:24px;"></div>
+      </header>
+
+      <div class="filter-section">
+        <div class="filter-group">
+          <h3>Travel Style</h3>
+          <div class="filter-tags" id="style-tags">
+            <button class="filter-tag" data-filter="style" data-value="Foodie">🍽 Foodie</button>
+            <button class="filter-tag" data-filter="style" data-value="Hip Spot">📸 Hip Spot</button>
+            <button class="filter-tag" data-filter="style" data-value="Aesthetics">📸 Aesthetics</button>
+            <button class="filter-tag" data-filter="style" data-value="Cultural">🏛 Cultural</button>
+            <button class="filter-tag" data-filter="style" data-value="Adventure">🧗 Adventure</button>
+            
+            <div id="expanded-styles" class="hidden" style="display: contents;">
+              <button class="filter-tag" data-filter="style" data-value="Local">🏙 Local</button>
+              <button class="filter-tag" data-filter="style" data-value="Chill">🧘 Chill</button>
+              <button class="filter-tag" data-filter="style" data-value="Nature">🌿 Nature</button>
+              <button class="filter-tag" data-filter="style" data-value="Learning">🧠 Learning</button>
+              <button class="filter-tag" data-filter="style" data-value="Nightlife">🌙 Nightlife</button>
+              <button class="filter-tag" data-filter="style" data-value="Budget">💸 Budget</button>
+              <button class="filter-tag" data-filter="style" data-value="Luxury">💎 Luxury</button>
+              <button class="filter-tag" data-filter="style" data-value="Spontaneous">🧭 Spontaneous</button>
+            </div>
+            
+            <button id="more-styles-btn" class="filter-tag more-btn">More</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Trip Duration</h3>
+          <div class="filter-tags scrollable-tags" id="duration-tags">
+            <button class="filter-tag" data-filter="duration" data-value="1 Day">1 Day</button>
+            <button class="filter-tag" data-filter="duration" data-value="2 Days">2 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="3 Days">3 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="4 Days">4 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="5 Days">5 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="6 Days">6 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="7 Days">7 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="8 Days">8 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="9 Days">9 Days</button>
+            <button class="filter-tag" data-filter="duration" data-value="10 Days">10 Days</button>
+          </div>
+        </div>
+
+        <div class="filter-group border-none">
+          <h3>Travel Pace</h3>
+          <div class="filter-tags" id="pace-tags">
+            <button class="filter-tag" data-filter="pace" data-value="Leisure">Leisure</button>
+            <button class="filter-tag" data-filter="pace" data-value="Moderate">Moderate</button>
+            <button class="filter-tag" data-filter="pace" data-value="Fast">Fast</button>
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <button id="clear-btn" class="btn-clear">CLEAR</button>
+          <button id="apply-btn" class="btn-apply">APPLY</button>
+        </div>
+      </div>
+
+      <div class="feed-list-container">
+        <div id="itinerary-list" class="itinerary-list">
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Screen -->
+    <div id="detail-screen" class="screen hidden" style="background: white;">
+      <header class="detail-header">
+        <button id="back-to-feed-btn" class="icon-btn" style="color: #333;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <h1 id="detail-title" style="color:#333;">Hongdae | Jisoo's Fashion Tour</h1>
+        <button class="icon-btn" style="color: #333;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        </button>
+      </header>
+      
+      <!-- Creator Profile Section -->
+      <div class="creator-profile-section">
+        <div class="profile-header">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/media__1776808544674.png" alt="Jisoo" class="profile-main-img">
+          <div class="profile-info">
+            <div class="profile-title-row">
+              <h2>Jisoo <span class="verified-tick"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1da1f2"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span></h2>
+              <button class="btn-follow">Follow</button>
+            </div>
+            <div class="profile-stats">
+              <span><strong>3,422</strong> followers</span>
+            </div>
+            <p class="bio">Seoul local | Fashion & Cafe Enthusiast ✨ Come explore the best hidden spots in Hongdae with me!</p>
+          </div>
+        </div>
+        <div class="profile-tags">
+          <span class="tag">📸 Hip Spot</span>
+          <span class="tag">📸 Aesthetics</span>
+          <span class="tag">⏱ 1 Day</span>
+          <span class="tag">🏃‍♀️ Fast</span>
+        </div>
+        <button class="btn-other-itineraries">View Jisoo's other itineraries</button>
+      </div>
+
+      <!-- Map & Timeline Section -->
+      <div class="timeline-container">
+        <div class="ig-feed-grid">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/media__1776808781964.png" alt="IG 1">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/media__1776808795700.png" alt="IG 2">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/media__1776808811417.png" alt="IG 3">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/media__1776808829149.png" alt="IG 4">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/media__1776808843459.png" alt="IG 5">
+          <img src="file:///C:/Users/yja02/.gemini/antigravity/brain/84fb197c-bf6c-48cb-94ad-8555761b446a/media__1776809097141.png" alt="IG 6">
+        </div>
+
+        <div class="timeline">
+          <!-- Spots injected via JS -->
+          <div id="timeline-spots"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Floating Action -->
+      <div class="bottom-action">
+        <button class="btn-save-itinerary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Save to My Pocket
+        </button>
+      </div>
+    </div>
+
+    <!-- Saved Folders Screen -->
+    <div id="saved-screen" class="screen hidden">
+      <header class="saved-main-header">
+        <h1>My Pocket</h1>
+      </header>
+      
+      <!-- Dynamic Breadcrumbs -->
+      <div id="saved-breadcrumbs" class="breadcrumbs hidden">
+        <span id="bc-region">Seoul</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span id="bc-neighborhood" class="active">Hongdae</span>
+      </div>
+
+      <!-- Overlap Top Spots Section (Injected via JS) -->
+      <div id="saved-overlap-section" class="hidden"></div>
+
+      <!-- Filter Bar (Only for Itinerary List View) -->
+      <div id="saved-filter-bar" class="saved-filter-bar hidden">
+        <select id="sort-dropdown" class="sort-dropdown">
+          <option value="recent">Recently Saved</option>
+          <option value="overlap">Most Overlapping Spots</option>
+        </select>
+        
+        <div id="filter-toggle" class="filter-toggle">
+          <span>Following Creators Only</span>
+          <div class="toggle-switch"></div>
+        </div>
+      </div>
+
+      <!-- Content Area (Folders or Itinerary List) -->
+      <div id="saved-content-area" style="flex: 1; overflow-y: auto;">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Saved!</div>
+
+    <!-- Create FAB -->
+    <div class="create-fab-container">
+      <button id="create-fab" class="create-fab">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" id="nav-home">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Home
+      </button>
+      <button class="nav-item" id="nav-saved">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z"></path><polyline points="8 10 12 14 16 10"></polyline></svg>
+        Pocket
+      </button>
+      <button class="nav-item" id="nav-profile">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        Profile
+      </button>
+    </nav>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
