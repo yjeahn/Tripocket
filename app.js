@@ -1,4 +1,4 @@
-﻿const jisooAvatar = './images/media__1776808544674.png';
+﻿const jisooAvatar = './media__1776808544674.png';
 
 const mockData = [
   {
@@ -10,7 +10,7 @@ const mockData = [
     style: ["Hip Spot", "Aesthetics"],
     duration: "1 Day",
     pace: "Fast",
-    img: "./images/jisoo_thumb_v2_1777340483811.png",
+    img: "./jisoo_thumb_v2_1777340483811.png",
     creator: {
       name: "Jisoo",
       avatar: jisooAvatar,
@@ -26,7 +26,7 @@ const mockData = [
     style: ["Aesthetics", "Chill"],
     duration: "2 Days",
     pace: "Leisure",
-    img: "./images/dohoon_thumb_1777340497145.png",
+    img: "./dohoon_thumb_1777340497145.png",
     creator: {
       name: "Dohoon",
       avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80",
@@ -42,7 +42,7 @@ const mockData = [
     style: ["Foodie", "Luxury"],
     duration: "3 Days",
     pace: "Moderate",
-    img: "./images/minji_thumb_1777340508910.png",
+    img: "./minji_thumb_1777340508910.png",
     creator: {
       name: "Minji",
       avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
@@ -58,7 +58,7 @@ const mockData = [
     style: ["Aesthetics", "Nature"],
     duration: "2 Days",
     pace: "Leisure",
-    img: "./images/somi_thumb_1777340522613.png",
+    img: "./somi_thumb_1777340522613.png",
     creator: {
       name: "Somi",
       avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=150&q=80",
@@ -74,7 +74,7 @@ const mockData = [
     style: ["Hip Spot", "Aesthetics"],
     duration: "1 Day",
     pace: "Fast",
-    img: "./images/mina_thumb_1777340532950.png",
+    img: "./mina_thumb_1777340532950.png",
     creator: {
       name: "Mina",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
@@ -89,11 +89,11 @@ const jisooSpots = [
     name: "Musinsa Standard Hongdae",
     desc: "Near Hongik Univ. Station Exit 9. Shop for the latest trendy fashion items.",
     link: "https://maps.app.goo.gl/fAavmx24ppcsHhqR8",
-    img: "./images/media__1776807012797.png",
+    img: "./media__1776807012797.png",
     images: [
-      { url: "./images/media__1776807012797.png", caption: "" },
-      { url: "./images/musinsa_img2_en_1777339944120.png", caption: "" },
-      { url: "./images/musinsa_img3_en_1777339963301.png", caption: "" }
+      { url: "./media__1776807012797.png", caption: "" },
+      { url: "./musinsa_img2_en_1777339944120.png", caption: "" },
+      { url: "./musinsa_img3_en_1777339963301.png", caption: "" }
     ]
   },
   {
@@ -101,28 +101,28 @@ const jisooSpots = [
     name: "as\"on",
     desc: "One of the most popular designer brands among Korean women in their 20s.",
     link: "https://maps.app.goo.gl/1ZiXj4KNdUMFJ47i9",
-    img: "./images/media__1776807138081.jpg"
+    img: "./media__1776807138081.jpg"
   },
   {
     time: "13:30 - 15:30",
     name: "nyunyu",
     desc: "Browse a huge variety of affordable accessories and goods.",
     link: "https://maps.app.goo.gl/woMgX2hPjP94XJJs9",
-    img: "./images/media__1776807144210.jpg"
+    img: "./media__1776807144210.jpg"
   },
   {
     time: "16:00 - 17:30",
     name: "Ader Error",
     desc: "Explore a unique showroom that feels like an art exhibition. Great for photos.",
     link: "https://maps.app.goo.gl/SXKaPnw6jJuTr3dr7",
-    img: "./images/media__1776807159851.jpg"
+    img: "./media__1776807159851.jpg"
   },
   {
     time: "18:00 - 20:00",
     name: "Damsot Hapjeong",
     desc: "Wrap up the day with a delicious traditional Korean pot rice dinner.",
     link: "https://maps.app.goo.gl/8xhwR1ZkiVEhXsJeA",
-    img: "./images/media__1776807275562.jpg"
+    img: "./media__1776807275562.jpg"
   }
 ];
 
@@ -715,4 +715,5 @@ btnSaveItinerary.addEventListener('click', () => {
     renderSavedNeighborhoods('Seoul');
   }, 2000);
 });
+
 
